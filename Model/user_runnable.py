@@ -5,7 +5,7 @@ persons = []
 running = 1
 def init():
     global running
-    print("Welcome to indecisive, a program designed to help you places to eat near you, depending on how you feel!")
+    print("Welcome to indecisive, a program designed to help you find places to eat near you!")
     running = 1
     
 

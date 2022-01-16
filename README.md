@@ -7,7 +7,7 @@ Built for NWHacks 2022
 # Build
 Built on Python 3.9.7 and based off mainly using Google's Places API to find landmarks with tag restaurant (or within that scope) nearest to the location that the user inputs**. Currently, restaurants are shown to user sorted in order of distance to location. Location is found and inputted through coordinates using geopy libraries - namely Nominatim. (Captures IP for HTTP verification).
 
-*Future scalability is set-up within dictionaries to allow for actual recommendations for users, based on restaurant rating, gender, how they feel etc.
+*Future scalability is set-up within dictionaries to allow for actual recommendations for users, based on restaurant rating,  how they feel etc.
 
 **Preferences will be set up later on to be recorded, allowing for preference/address retention. 
 

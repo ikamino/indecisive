@@ -8,7 +8,7 @@ def init():
     
 
     while running: 
-        menu(running)
+        menu()
    
 
 
@@ -46,6 +46,7 @@ def decisions():
         print("Just to get to know you better, we'd like to ask you some questions!")
         p1 = create_profile()
         print("If at any time you'd like to change information, just let us know through the 'change' command!")
+        persons.append(p1)
 
 
 # is there already a profile init? 
@@ -65,7 +66,12 @@ def create_profile():
     address = input("Street Address? ")
     city = input("city? ")
     province = input("province? ")
-    num_people = input("how many people you with?")
+    num_people = input("how many people are you with?")
+    price_range = input("How much money are you looking to spend? Give a number from 1 to 4")
+    location = address + " " + city + " " + province
+    feeling = input("How are you feeling today?")
+    profile = Person(name, age, price_range, location, feeling, num_people)
+    return profile;
 # location into restaurant should be vars address,city,province
 
 

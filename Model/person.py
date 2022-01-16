@@ -2,11 +2,19 @@ class Person:
     price_range = 0 # one of [1]
     location = '' # address 
     feeling = '' # a word out of a list of possible choices
-    name = '' #
+    name = '' 
+    age = 0
+    num_of_people = 0
 
-    def __init__(self, name, price_range, location, ):
+    def __init__(self, name, age, price_range, location, feeling, num_of_people):
             # Assign the argument to the instance's name attribute
             self.name = name
-            
-            # Initialize property
-            self._age = 0
+            self.feeling = feeling
+            self.location = location
+            self.price_range = price_range
+            self._age = age
+            self.num_of_people = num_of_people
+
+    
+
+    

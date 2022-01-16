@@ -69,9 +69,9 @@ def create_profile():
     num_people = input("how many people are you with?")
     price_range = input("How much money are you looking to spend? Give a number from 1 to 4")
     location = address + " " + city + " " + province
-    feeling = input("How are you feeling today?")
-    profile = Person(name, age, price_range, location, feeling, num_people)
-    return profile;
+    # feeling = input("How are you feeling today?")
+    profile = Person(name, age, price_range, location, num_people)
+    return profile
 # location into restaurant should be vars address,city,province
 
 

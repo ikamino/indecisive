@@ -1,4 +1,4 @@
-from turtle import hideturtle
+from person import Person
 
 running = 1
 def init():
@@ -40,3 +40,5 @@ def exit_program():
 
 def decisions(): 
     print("We're glad to help you find what to eat, and where, near you!")
+    p = Person()
+

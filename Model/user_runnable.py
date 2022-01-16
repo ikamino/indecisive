@@ -77,7 +77,7 @@ def create_profile():
     return profile
 # location into restaurant should be vars address,city,province
 
-init()
+
 # after creating profile put profile into persons list -- doesnt have to be large just needed a way to track instances globally. 
 # from there, start questionaire on feelings and fill out feelings_sort.py.
 #whatever result we get from feelings_sort.py match up with factors such as age and (need gender in persons.py as well) (ie according to x study girls like ice cream more while guys like home-cooked meals like roast beef more. )

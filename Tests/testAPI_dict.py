@@ -32,14 +32,16 @@ for place in result['results']:
                 pl = None
                 
         try: 
-                
+                fa = str(details['formatted_phone_number'])
+        except:
+                fa = None
         
         place_dict = {
                 "name": str((place['name'])),
-                "price_rating": str((place['price_level'])),
+                "price_rating": pl,
                 "rating": str((place['rating'])),
                 "address": str(details['formatted_address']),
-                "phone": str(details['formatted_phone_number'])      
+                "phone": fa     
         }
         
         place_data.append(place_dict)

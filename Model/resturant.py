@@ -1,5 +1,5 @@
 import googlemaps as gm
-import numpy as np
+import geopy as gp
 import requests
 import urllib.parse
 

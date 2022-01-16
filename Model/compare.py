@@ -1,5 +1,5 @@
 
-class compare:
+class Compare:
 
     def cmp (self, rest_list):
         end = 0

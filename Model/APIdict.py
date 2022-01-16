@@ -1,8 +1,9 @@
 import googlemaps as gm
 from geopy.geocoders import Nominatim
+from compare import Compare
 
 
-def rest_info_list():
+def rest_info_list(location):
     place_data = []
     maps = gm.Client(key = 'AIzaSyCqpnuB4GgssSCxpbmGrGWYSyzGcOtgleo')
         # url = 'https://nominatim.openstreetmap.org/search/' + urllib.parse.quote(location) +'?format=json'
@@ -10,7 +11,7 @@ def rest_info_list():
         # lat = response[0]["lat"]
         # long = response[0]["lon"]
     geolocator = Nominatim(user_agent="http")
-    location = geolocator.geocode('6279 Eagles Dr Vancouver BC')
+    location = geolocator.geocode(location)
     # we need address, city, and province
     lat_long = str(location.latitude) + "," + str(location.longitude)
     result = maps.places_nearby(location = lat_long, rank_by = 'distance', open_now = False, type = "restaurant")
@@ -42,8 +43,9 @@ def rest_info_list():
             }
             
             place_data.append(place_dict)
+    print (place_data)
     return place_data
-        
+    
 
       
 

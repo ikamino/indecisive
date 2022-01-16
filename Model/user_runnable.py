@@ -1,4 +1,6 @@
+from APIdict import rest_info_list
 from person import Person
+import APIdict
 persons = []
 running = 1
 def init():
@@ -45,6 +47,7 @@ def decisions():
     if check_profile(): 
         print("Just to get to know you better, we'd like to ask you some questions!")
         p1 = create_profile()
+        rest_info_list(p1.location)
         print("If at any time you'd like to change information, just let us know through the 'change' command!")
         persons.append(p1)
 
@@ -62,7 +65,6 @@ def create_profile():
     name = input()
     print("How old are you?")
     age = input()
-    print("From a scale of 1-3 whats your price range?")
     address = input("Street Address? ")
     city = input("city? ")
     province = input("province? ")
@@ -74,7 +76,7 @@ def create_profile():
     return profile
 # location into restaurant should be vars address,city,province
 
-
+init()
 # after creating profile put profile into persons list -- doesnt have to be large just needed a way to track instances globally. 
 # from there, start questionaire on feelings and fill out feelings_sort.py.
 #whatever result we get from feelings_sort.py match up with factors such as age and (need gender in persons.py as well) (ie according to x study girls like ice cream more while guys like home-cooked meals like roast beef more. )

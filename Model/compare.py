@@ -7,8 +7,10 @@ class Compare:
         which_chose = 0
         orig_list = rest_list
         yes_list = []
-        yes_list.append(orig_list[0])
-        yes_list.append(orig_list[1])
+        a = orig_list[0]
+        b = orig_list[1]
+        yes_list.append(a["name"])
+        yes_list.append(b["name"])
         for i in range(len(rest_list) - 1):
             rest1 = yes_list[0]
             rest2 = yes_list[1]
@@ -22,12 +24,14 @@ class Compare:
                 yes_list.remove(rest2)
                 # curr += 1
                 which_chose = 1
-                yes_list.insert(1, orig_list[curr])
+                a = orig_list[curr]
+                yes_list.insert(1, a["name"])
             else:
                 yes_list.remove(rest1)
                 # curr += 1
                 which_chose = 2
-                yes_list.insert(0, orig_list[curr])
+                a = orig_list[curr]
+                yes_list.insert(0, a["name"])
         chosen = ""
         if(which_chose == 1):
             chosen = yes_list[0]

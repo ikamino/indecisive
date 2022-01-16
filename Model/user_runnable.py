@@ -1,6 +1,6 @@
 from APIdict import rest_info_list
 from person import Person
-import APIdict
+from compare import Compare
 persons = []
 running = 1
 def init():
@@ -47,7 +47,8 @@ def decisions():
     if check_profile(): 
         print("Just to get to know you better, we'd like to ask you some questions!")
         p1 = create_profile()
-        rest_info_list(p1.location)
+        collect_list = rest_info_list(p1.location)
+        Compare(collect_list)
         print("If at any time you'd like to change information, just let us know through the 'change' command!")
         persons.append(p1)
 

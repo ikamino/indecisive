@@ -1,6 +1,6 @@
 import googlemaps as gm
 from geopy.geocoders import Nominatim
-from compare import Compare
+
 
 
 def rest_info_list(location):

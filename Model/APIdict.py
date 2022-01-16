@@ -43,7 +43,7 @@ def rest_info_list(location):
             }
             
             place_data.append(place_dict)
-    print (place_data)
+   
     return place_data
     
 

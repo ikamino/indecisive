@@ -40,5 +40,3 @@ def exit_program():
 
 def decisions(): 
     print("We're glad to help you find what to eat, and where, near you!")
-
-init()

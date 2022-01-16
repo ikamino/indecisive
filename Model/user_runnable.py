@@ -66,7 +66,7 @@ def create_profile():
     city = input("city? ")
     province = input("province? ")
     num_people = input("how many people you with?")
-
+# location into restaurant should be vars address,city,province
 
 
 # after creating profile put profile into persons list -- doesnt have to be large just needed a way to track instances globally. 

@@ -9,7 +9,7 @@ Built on Python 3.9.7 and based off mainly using Google's Places API to find lan
 
 *Future scalability is set-up within dictionaries to allow for actual recommendations for users, based on restaurant rating, gender, how they feel etc.
 
-**Preferences can be set up later on to be recorded, allowing for preference/address retention. 
+**Preferences will be set up later on to be recorded, allowing for preference/address retention. 
 
 # Installation
 Google Places API key is **needed**. Workability from there should be a non-issue given libraries for googlemaps and geopy library installs. All the code that gets run is inside the Model folder. 

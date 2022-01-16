@@ -7,7 +7,7 @@ class Restaurant:
     # location = '6279 eagles drive'
     name = ''
     price_range = ''
-    akey = 'AIzaSyCqpnuB4GgssSCxpbmGrGWYSyzGcOtgleo'
+    akey = ''
     long =  ''
     lat = ''
     
@@ -22,7 +22,7 @@ class Restaurant:
     def __init__(self, location):
         # Assign the argument to the instance's name attribute
         # self.location = location
-        maps = gm.Client(key = 'AIzaSyCqpnuB4GgssSCxpbmGrGWYSyzGcOtgleo')
+        maps = gm.Client(key = '!!!put key here!!!')
         geolocator = Nominatim(user_agent="http")
         location = geolocator.geocode(location)
         # we need address, city, and province

@@ -1,5 +1,5 @@
 from person import Person
-
+persons = []
 running = 1
 def init():
     global running
@@ -38,7 +38,42 @@ def exit_program():
     global running
     running = 0
 
+
+
 def decisions(): 
     print("We're glad to help you find what to eat, and where, near you!")
-    p = Person()
+    if check_profile(): 
+        print("Just to get to know you better, we'd like to ask you some questions!")
+        p1 = create_profile()
+        print("If at any time you'd like to change information, just let us know through the 'change' command!")
+
+
+# is there already a profile init? 
+def check_profile(): 
+    if persons: 
+        return 0
+    else: 
+        return 1
+
+
+def create_profile(): 
+    print("What's your name?")
+    name = input()
+    print("How old are you?")
+    age = input()
+    print("From a scale of 1-3 whats your price range?")
+    address = input("Street Address? ")
+    city = input("city? ")
+    province = input("province? ")
+    num_people = input("how many people you with?")
+
+
+
+# after creating profile put profile into persons list -- doesnt have to be large just needed a way to track instances globally. 
+# from there, start questionaire on feelings and fill out feelings_sort.py.
+#whatever result we get from feelings_sort.py match up with factors such as age and (need gender in persons.py as well) (ie according to x study girls like ice cream more while guys like home-cooked meals like roast beef more. )
+
+# after all of that its just connecting to google apis... shouldn't need too many difficult packages. If we have time implement a left right system based on lists filled with words that suggest certain emotions, or different cuisines/food types.
+
+
 

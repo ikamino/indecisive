@@ -20,7 +20,7 @@ class Compare:
             if((len(orig_list) -1) != curr):
                 curr += 1
             
-            if (answer == rest1):
+            if (answer == 1):
                 yes_list.remove(rest2)
                 # curr += 1
                 which_chose = 1

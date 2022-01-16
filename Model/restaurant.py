@@ -2,7 +2,7 @@ import googlemaps as gm
 from geopy.geocoders import Nominatim
 
 
-class Resturant:
+class Restaurant:
     # location = '6279 eagles drive'
     name = ''
     price_range = ''

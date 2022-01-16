@@ -15,12 +15,12 @@ class Compare:
             rest1 = yes_list[0]
             rest2 = yes_list[1]
 
-            print("What would you rather eat? " + rest1 + " or " + rest2 + "?")
+            print("What would you rather eat? " + rest1 + " or " + rest2 + "? (Input 1 or 2 for options)")
             answer = input()
             if((len(orig_list) -1) != curr):
                 curr += 1
             
-            if (answer == 1):
+            if (answer == "1"):
                 yes_list.remove(rest2)
                 # curr += 1
                 which_chose = 1

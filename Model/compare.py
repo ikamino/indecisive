@@ -1,4 +1,4 @@
-
+from APIdict import rest_info_list
 
 
 class compare:
@@ -43,5 +43,4 @@ class compare:
 
 
 
-
-
+print(rest_info_list())

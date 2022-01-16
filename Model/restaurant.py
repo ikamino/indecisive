@@ -20,8 +20,8 @@ class Restaurant:
 
     def __init__(self, location):
         # Assign the argument to the instance's name attribute
-        self.location = location
-        maps = gm.Client(key = self.akey)
+        # self.location = location
+        maps = gm.Client(key = 'AIzaSyCqpnuB4GgssSCxpbmGrGWYSyzGcOtgleo')
         # url = 'https://nominatim.openstreetmap.org/search/' + urllib.parse.quote(location) +'?format=json'
         # response = requests.get(url).json()
         # lat = response[0]["lat"]
@@ -29,7 +29,9 @@ class Restaurant:
         geolocator = Nominatim(user_agent="http")
         location = geolocator.geocode(location)
         # we need address, city, and province
-        result = maps.places_nearby(location = (location.latitude + ", " + location.longitude), radius = 40000, open_now = True, type = "Resturant")
+        lat_long = str(location.latitude) + "," + str(location.longitude)
+
+        result = maps.places_nearby(location = lat_long, radius = 40000, open_now = False, type = "Cafe")
         print(result)
 
 

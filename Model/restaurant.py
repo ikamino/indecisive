@@ -1,5 +1,6 @@
 import googlemaps as gm
 from geopy.geocoders import Nominatim
+import time
 
 
 class Restaurant:
@@ -22,17 +23,20 @@ class Restaurant:
         # Assign the argument to the instance's name attribute
         # self.location = location
         maps = gm.Client(key = 'AIzaSyCqpnuB4GgssSCxpbmGrGWYSyzGcOtgleo')
-        # url = 'https://nominatim.openstreetmap.org/search/' + urllib.parse.quote(location) +'?format=json'
-        # response = requests.get(url).json()
-        # lat = response[0]["lat"]
-        # long = response[0]["lon"]
         geolocator = Nominatim(user_agent="http")
         location = geolocator.geocode(location)
         # we need address, city, and province
         lat_long = str(location.latitude) + "," + str(location.longitude)
 
         result = maps.places_nearby(location = lat_long, radius = 40000, open_now = False, type = "Cafe")
-        print(result)
+        # print(result)
+        for place in result['results']:
+            my_place_id = place['place_id']
+            my_fields = ['name', 'formatted_phone_number', 'type']
+            place_details = maps.place(place_id = my_place_id, fields = my_fields)
+            print(place_details)
+
+
 
 
 

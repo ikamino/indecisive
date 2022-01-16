@@ -1,6 +1,6 @@
 # indecisive
 
-Indecisive is a program that helps users pick and choose where to eat, based on location and restaurant name*. 
+indecisive is a program that helps users pick and choose where to eat, based on location and restaurant name*. 
 
 Built for NWHacks 2022
 

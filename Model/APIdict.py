@@ -22,22 +22,31 @@ def rest_info_list(location):
             my_place_id = place['place_id']
             place_details = maps.place(place_id = my_place_id, fields = my_fields)
             details = place_details['result']
+            
+            
                 
                 
             try:
-                    pl = str((place['price_level']))
+                pl = str((place['price_level']))
             except:
-                    pl = None
+                pl = None
                     
             try: 
-                    fa = str(details['formatted_phone_number'])
+                fa = str(details['formatted_phone_number'])
             except:
-                    fa = None
+                fa = None
+                
+            try:
+                ra = str((place['rating']))
+            except:
+                ra = None
+        
+        
             
             place_dict = {
                     "name": str((place['name'])),
                     "price_rating": pl,
-                    "rating": str((place['rating'])),
+                    "rating": ra,
                     "address": str(details['formatted_address']),
                     "phone": fa     
             }

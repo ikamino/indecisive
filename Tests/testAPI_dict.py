@@ -35,11 +35,16 @@ for place in result['results']:
                 fa = str(details['formatted_phone_number'])
         except:
                 fa = None
+                
+        try:
+                ra = str((place['rating']))
+        except:
+                ra = None       
         
         place_dict = {
                 "name": str((place['name'])),
                 "price_rating": pl,
-                "rating": str((place['rating'])),
+                "rating": ra,
                 "address": str(details['formatted_address']),
                 "phone": fa     
         }

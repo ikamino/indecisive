@@ -5,7 +5,7 @@ from geopy.geocoders import Nominatim
 
 def rest_info_list(location):
     place_data = []
-    maps = gm.Client(key = '!!!PASTE APIKEY HERE!!!')
+    maps = gm.Client(key = "AIzaSyCqpnuB4GgssSCxpbmGrGWYSyzGcOtgleo")
         # url = 'https://nominatim.openstreetmap.org/search/' + urllib.parse.quote(location) +'?format=json'
         # response = requests.get(url).json()
         # lat = response[0]["lat"]

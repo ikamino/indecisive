@@ -25,15 +25,14 @@ def menu():
 
 def commands(user_input): 
     if user_input == "help": 
-        help()
+        print('Here are the available functions to you \nhelp: display commands \ndecisions: go through the steps to satisfy your cravings for the day. \n exit: exit the program')
     elif user_input == "decisions":
         decisions()
 
     elif user_input == "exit": 
         exit_program()
 
-def help():
-    print('Here are the available functions to you \nhelp: display commands \ndecisions: go through the steps to satisfy your cravings for the day. \n exit: exit the program')
+
     
 
 def exit_program():
